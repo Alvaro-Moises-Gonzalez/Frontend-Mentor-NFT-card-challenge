@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content=" solution for NFT card for frontend Mentor challenge")
+        link(rel="icon", type="image/png", sizes="32x32", href="./images/favicon-32x32.png")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com",crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap", rel="stylesheet")
+        link(rel="stylesheet", href="css/style.css", type="text/css")
+        title Frontend Mentor | NFT preview card component
+    body 
+        main.card-container 
+            section.card
+                figure.image-container
+                    div.eye
+                        img.eye__icon(src="images/icon-view.svg", alt="eye icon")
+                    img.card__image(src="images/image-equilibrium.jpg", alt="equilibrium image")
+                figcaption.card__info
+                    h1.card__info--title Equilibrium #3429
+                    p.card__info--description Our Equilibrium collection promotes balance and calm.
+                section.card-details
+                    .card-details__left 
+                        img(src="images/icon-ethereum.svg", alt="ethereum icon")
+                        p 0.041 ETH
+                    .card-details__right
+                        img(src="images/icon-clock.svg", alt="clock icon")
+                        p 3 days left
+                hr
+                figure.author 
+                    img(src="images/image-avatar.png", alt="autor image")
+                    figcaption.autor__info Creation of 
+                        p Jules Wyvern
+        footer.attribution
+            p.attribution__page Challenge by
+                a(href="https://www.frontendmentor.io?ref=challenge" target="_blank") Frontend Mentor.
+            p.attribution__coder Coded by 
+                a(href="https://github.com/Alvaro-Moises-Gonzalez", target="_blank")  Álvaro Moisés.
