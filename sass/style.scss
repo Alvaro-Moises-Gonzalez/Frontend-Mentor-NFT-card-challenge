@@ -1,0 +1,289 @@
+/*global vars*/
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$font: 'Outfit', sans-serif;
+
+/*backgrund colors*/
+$main-background: hsl(217, 54%, 11%);
+$card-background: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    display: grid;
+    height: 100vh;
+    background-color: $main-background;
+}
+
+.card-container{
+    background-color: $main-background;
+    display: grid;
+    justify-items: center;
+}
+
+.card{
+    width: 300px;
+    height: auto;
+    background-color: $card-background;
+    margin: 10% auto;
+    border-radius: 15px;
+    position: relative;
+    transition: all 0.4s;
+    box-shadow: 0px 0px 40px rgba(0,0,0, 0.8);
+    .image-container{
+        .eye{
+            display: grid;
+            width: 260px;
+            height: 260px;
+            margin: 20px;
+            border-radius: 15px;
+            background-color: rgba(0, 255, 247,0.5);
+            place-items: center;
+            position: absolute;
+            top: 0px;
+            visibility: hidden;
+        }
+        &:hover .eye{
+            visibility: visible;
+        }
+    
+        .card__image{
+            width: 260px;
+            height: 260px;
+            margin: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+
+    .card__info{
+        display: flex;
+        flex-direction: column;
+        .card__info--title{
+            font-family: $font;
+            color: $white;
+            font-weight: 600;
+            padding-left: 20px;
+            &:hover{
+                color: $cyan;
+                cursor: pointer;
+            }
+        }
+        .card__info--description{
+            font-size: 1.6rem;
+            color: $soft-blue;
+            font-family: $font;
+            padding: 0 20px;
+            opacity: 0.7;
+            margin: 5% 0;
+        }  
+    }
+    .card-details{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px 15px 0px;
+        .card-details__left {
+            display: flex;
+            img{
+                width: 10px;
+                height: 20px;
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+            p{
+                color: $cyan;
+                font-size: 1.5rem;
+                font-family: $font;
+            }
+        }
+
+        .card-details__right {
+            display: flex;
+            img{
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+            p{
+                color: $soft-blue;
+                font-size: 1.5rem;
+                font-family: $font;
+                opacity: 0.7;
+                padding-right: 20px;
+            }
+        }
+    } 
+    hr{
+        border: 1px solid $soft-blue;
+        opacity: 0.2;
+        width: 90%;
+        position: relative;
+        left: calc(5%);
+    }
+    .author{
+        display: flex;
+        img{
+            width: 40px;
+            height: 40px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            margin: 20px;
+        }
+        .autor__info{
+            display: flex;
+            font-family: $font;
+            color: $soft-blue;
+            opacity: 0.7;
+            font-size: 1.5rem;
+            margin: 30px 0px;
+            p{
+                color: $white;
+                margin-left: 10px;
+                &:hover{
+                    color: $cyan;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+
+.attribution{
+    background-color: $main-background;
+    display: flex;
+    justify-content: center;
+    .attribution__page{
+        color: $white;
+        font-family: $font;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        a{
+            color: $white;
+            font-size: 1.3rem;
+            margin-right: 5px;
+            margin-left: 5px;
+            font-family: $font;
+            text-decoration: none;
+        }
+    }
+    .attribution__coder{
+        color: $white;
+        font-family: $font;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        a{
+            color: $white;
+            font-size: 1.3rem;
+            margin-right: 5px;
+            margin-left: 5px;
+            font-family: $font;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    body{
+        display: grid;
+        place-items: center;
+    }
+    
+    .card-container{
+        .card{
+            width: 400px;
+            height: 700px;
+            margin-top: 10%;
+            .image-container{
+                .eye{
+                    width: 360px;
+                    height: 360px;
+                    margin: 20px;
+                }
+                &:hover .eye{
+                    visibility: visible;
+                }
+            
+                .card__image{
+                    width: 360px;
+                    height: 360px;
+                    margin: 20px;
+                }
+            }
+        
+            .card__info{
+                display: flex;
+                flex-direction: column;
+                .card__info--title{
+                    font-size: 3rem;
+                }
+                .card__info--description{
+                    font-size: 2.2rem;
+                    
+                }  
+            }
+            .card-details{
+                .card-details__left {
+                    img{
+                        width: 20px;
+                        height: 30px;
+                    }
+                    p{
+                        font-size: 2rem;
+                        margin-top: 1%;
+                    }
+                }
+        
+                .card-details__right {
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    p{
+                        font-size: 2rem;
+                        margin-top: 1%;
+                    }
+                }
+            } 
+            .author{
+                display: flex;
+                img{
+                    width: 60px;
+                    height: 60px;
+                }
+                .autor__info{
+                    font-size: 2rem;
+                    margin: 9% 0;
+                    p{
+                        color: $white;
+                        margin-left: 10px;
+                        &:hover{
+                            color: $cyan;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+
+    .attribution{
+        transform: scale(1.5);
+    }
+    
+
+}
