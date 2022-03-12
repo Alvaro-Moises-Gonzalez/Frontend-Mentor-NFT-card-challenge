@@ -47,7 +47,7 @@ desktop view:
 ### Links
 
 - Solution URL: [git-hub repository](https://github.com/Alvaro-Moises-Gonzalez/Frontend-Mentor-NFT-card-challenge)
-- Live Site URL: [git-hub pages](https://your-live-site-url.com)
+- Live Site URL: [git-hub pages](https://alvaro-moises-gonzalez.github.io/Frontend-mentor-nft-card-challenge/)
 
 ## My process
 I started building the HTML markup using pug, creating various containers, one for the card, the card itself is a container that wraps the images and the rest of the info.
